@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.8.2)
+  - SpaceXAPI-Swift (1.0.6):
+    - Alamofire (~> 4.8.1)
+
+DEPENDENCIES:
+  - SpaceXAPI-Swift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SpaceXAPI-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  SpaceXAPI-Swift: 0cbe04e239f141e25b8133731f656d59b7540c4b
+
+PODFILE CHECKSUM: edf2088a329bb4dafc3ae1d7e97d882ce98fb55c
+
+COCOAPODS: 1.8.4

@@ -8,7 +8,7 @@
 
 import UIKit
 import SwiftUI
-import SpaceXAPI_Swift
+
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -19,24 +19,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-
-        // Create the SwiftUI view that provides the window contents.
-        let launches = [
-            LaunchModel(id: 0, name: "Launch 0", date: Date(timeIntervalSinceReferenceDate: -123456789.0)),
-            LaunchModel(id: 1, name: "Launch 1", date: Date(timeIntervalSinceNow: -123456789.0)),
-            LaunchModel(id: 2, name: "Launch 2", date: Date(timeIntervalSinceNow: -13456789.0)),
-            LaunchModel(id: 3, name: "Launch 3", date: Date(timeIntervalSinceNow: -1256789.0))
-        ]
-        
-        SpaceXAPIClient.shared.getAllCapsules { (capsules, error) in
-            guard error == nil else {
-              // Handle Error.
-              return
-            }
-            // No error, we have data!
-            print(capsules?[0].capsuleID)
-        }
-
         
         let contentView = ContentView()
 

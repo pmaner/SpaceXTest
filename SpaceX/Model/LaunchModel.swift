@@ -7,10 +7,17 @@
 //
 
 import Foundation
+import SpaceXAPI_Swift
 
 
 struct LaunchModel : Identifiable {
-    var id = 0
-    var name : String = "Lauch Test"
-    var date : Date
+    var id = UUID()
+    var name : String
+    var date : String
+    
+    static func create(fromLaunch: Launch) -> LaunchModel
+    {
+        let model = LaunchModel(name: fromLaunch.missionName!, date: fromLaunch.launchDateLocal!)
+        return model;
+    }
 }

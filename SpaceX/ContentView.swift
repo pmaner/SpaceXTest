@@ -16,21 +16,13 @@ private let dateFormatter: DateFormatter = {
 }()
 
 struct ContentView: View {
-    //@Binding var launches = [LaunchModel]()
-    //@ObjectBinding var user = Resource(endpoint: userInfo(login: "objcio"))
-
-    @State private var launches = [
-        LaunchModel(id: 0, name: "Launch 0", date: Date(timeIntervalSinceReferenceDate: -123456789.0)),
-        LaunchModel(id: 1, name: "Launch 1", date: Date(timeIntervalSinceNow: -123456789.0)),
-        LaunchModel(id: 2, name: "Launch 2", date: Date(timeIntervalSinceNow: -13456789.0)),
-        LaunchModel(id: 3, name: "Launch 3", date: Date(timeIntervalSinceNow: -1256789.0))
-    ]
+    @ObservedObject var launchRepository = LaunchRepository()
     @State private var sortIndex = 0
     @State private var sortType = ["Launch Date","Mission Name"]
     
     var body: some View {
         NavigationView {
-            MasterView(launches: $launches)
+            MasterView(launches: $launchRepository.launches)
                 .navigationBarTitle(Text("Launches"))
                 .navigationBarItems(
                     trailing: SortView()
@@ -64,7 +56,7 @@ struct DetailView: View {
     var body: some View {
         Group {
             if selectedLaunch != nil {
-                Text("\(selectedLaunch!.date, formatter: dateFormatter)")
+                Text("\(selectedLaunch!.date)")
             } else {
                 Text("Detail view content goes here")
             }
