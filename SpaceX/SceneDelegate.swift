@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import SpaceXAPI_Swift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -26,6 +27,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             LaunchModel(id: 2, name: "Launch 2", date: Date(timeIntervalSinceNow: -13456789.0)),
             LaunchModel(id: 3, name: "Launch 3", date: Date(timeIntervalSinceNow: -1256789.0))
         ]
+        
+        SpaceXAPIClient.shared.getAllCapsules { (capsules, error) in
+            guard error == nil else {
+              // Handle Error.
+              return
+            }
+            // No error, we have data!
+            print(capsules?[0].capsuleID)
+        }
+
+        
         let contentView = ContentView()
 
         // Use a UIHostingController as window root view controller.

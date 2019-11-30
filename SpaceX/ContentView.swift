@@ -17,6 +17,8 @@ private let dateFormatter: DateFormatter = {
 
 struct ContentView: View {
     //@Binding var launches = [LaunchModel]()
+    //@ObjectBinding var user = Resource(endpoint: userInfo(login: "objcio"))
+
     @State private var launches = [
         LaunchModel(id: 0, name: "Launch 0", date: Date(timeIntervalSinceReferenceDate: -123456789.0)),
         LaunchModel(id: 1, name: "Launch 1", date: Date(timeIntervalSinceNow: -123456789.0)),
