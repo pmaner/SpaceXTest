@@ -12,12 +12,21 @@ import SpaceXAPI_Swift
 
 struct LaunchModel : Identifiable {
     var id = UUID()
-    var name : String
-    var date : String
+    var missionName : String
+    var launchDate : String
+    var launchSite : String
+    var launchSuccess : Bool
+    var launchYear : String
+    var wikipediaLink : String
     
     static func create(fromLaunch: Launch) -> LaunchModel
     {
-        let model = LaunchModel(name: fromLaunch.missionName!, date: fromLaunch.launchDateLocal!)
+        let model = LaunchModel(missionName: fromLaunch.missionName ?? "Unknown",
+                                launchDate: fromLaunch.launchDateLocal ?? "Unknown",
+                                launchSite: (fromLaunch.launchSite?.siteNameLong) ?? "Unknown",
+                                launchSuccess: fromLaunch.launchSuccess ?? false,
+                                launchYear: fromLaunch.launchYear ?? "Unknown",
+                                wikipediaLink: fromLaunch.links?.wikipedia ?? "")
         return model;
     }
 }

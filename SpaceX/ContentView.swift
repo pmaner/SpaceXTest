@@ -41,7 +41,7 @@ struct MasterView: View {
                 NavigationLink(
                     destination: DetailView(selectedLaunch: launch)
                 ) {
-                    Text("\(launch.name)")
+                    Text("\(launch.missionName)")
                 }
             }.onDelete { indices in
                 indices.forEach { self.launches.remove(at: $0) }
@@ -50,13 +50,34 @@ struct MasterView: View {
     }
 }
 
+//struct ListView : View {
+//    let mygroups = [
+//        TestData(title: "Numbers", items: ["1","2","3"]),
+//        TestData(title: "Letters", items: ["A","B","C"]),
+//        TestData(title: "Symbols", items: ["€","%","&"])
+//    ]
+//
+//    var body: some View {
+//        List {
+//            ForEach(mygroups) { gr in
+//                Section(header: Text(gr.title),
+//                        footer: Text("...footer...") ) {
+//                            ForEach(gr.items.identified(by: \.self)) { item in
+//                                Text(item)
+//                            }
+//                }
+//            }
+//        }
+//    }
+//}
+
 struct DetailView: View {
     var selectedLaunch: LaunchModel?
 
     var body: some View {
         Group {
             if selectedLaunch != nil {
-                Text("\(selectedLaunch!.date)")
+                Text("\(selectedLaunch!.launchDate)")
             } else {
                 Text("Detail view content goes here")
             }

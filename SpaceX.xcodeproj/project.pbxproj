@@ -19,6 +19,8 @@
 		DA25E31823927122004B7118 /* SortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25E31723927122004B7118 /* SortView.swift */; };
 		DA25E31B239272DF004B7118 /* LaunchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25E31A239272DF004B7118 /* LaunchModel.swift */; };
 		DA25E32023930EF5004B7118 /* LaunchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25E31F23930EF5004B7118 /* LaunchRepository.swift */; };
+		DA8F3FF82393C0C300DD8CC7 /* GroupedByYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F3FF72393C0C300DD8CC7 /* GroupedByYear.swift */; };
+		DA8F3FFA2393C0DF00DD8CC7 /* GroupedByFirstLetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F3FF92393C0DF00DD8CC7 /* GroupedByFirstLetter.swift */; };
 		E4E099D0B0011F821EDC2741 /* Pods_SpaceXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC99D042494ECAE404F3A8E5 /* Pods_SpaceXTests.framework */; };
 		E7B9C24E79AF643EDFAFD251 /* Pods_SpaceX_SpaceXUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1EEBD738F02F4F74F8A402 /* Pods_SpaceX_SpaceXUITests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,8 @@
 		DA25E31723927122004B7118 /* SortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortView.swift; sourceTree = "<group>"; };
 		DA25E31A239272DF004B7118 /* LaunchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchModel.swift; sourceTree = "<group>"; };
 		DA25E31F23930EF5004B7118 /* LaunchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRepository.swift; sourceTree = "<group>"; };
+		DA8F3FF72393C0C300DD8CC7 /* GroupedByYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedByYear.swift; sourceTree = "<group>"; };
+		DA8F3FF92393C0DF00DD8CC7 /* GroupedByFirstLetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedByFirstLetter.swift; sourceTree = "<group>"; };
 		F8E4414523E89E7DB659409E /* Pods-SpaceX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceX.debug.xcconfig"; path = "Target Support Files/Pods-SpaceX/Pods-SpaceX.debug.xcconfig"; sourceTree = "<group>"; };
 		FC99D042494ECAE404F3A8E5 /* Pods_SpaceXTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -189,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				DA25E31723927122004B7118 /* SortView.swift */,
+				DA8F3FF72393C0C300DD8CC7 /* GroupedByYear.swift */,
+				DA8F3FF92393C0DF00DD8CC7 /* GroupedByFirstLetter.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -448,11 +454,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8F3FF82393C0C300DD8CC7 /* GroupedByYear.swift in Sources */,
 				DA25E32023930EF5004B7118 /* LaunchRepository.swift in Sources */,
 				DA25E31823927122004B7118 /* SortView.swift in Sources */,
 				DA1A75B523925C97007EB12E /* AppDelegate.swift in Sources */,
 				DA1A75B723925C97007EB12E /* SceneDelegate.swift in Sources */,
 				DA1A75B923925C97007EB12E /* ContentView.swift in Sources */,
+				DA8F3FFA2393C0DF00DD8CC7 /* GroupedByFirstLetter.swift in Sources */,
 				DA25E31B239272DF004B7118 /* LaunchModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
