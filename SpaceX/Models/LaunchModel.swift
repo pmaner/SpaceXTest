@@ -17,6 +17,7 @@ struct LaunchModel : Identifiable {
     var launchSite : String
     var launchSuccess : Bool
     var launchYear : String
+    var rocketDetails : String
     var wikipediaLink : String
     
     static func create(fromLaunch: Launch) -> LaunchModel
@@ -26,6 +27,7 @@ struct LaunchModel : Identifiable {
                                 launchSite: (fromLaunch.launchSite?.siteNameLong) ?? "Unknown",
                                 launchSuccess: fromLaunch.launchSuccess ?? false,
                                 launchYear: fromLaunch.launchYear ?? "Unknown",
+                                rocketDetails: fromLaunch.rocket?.rocketName ?? "Unknown",
                                 wikipediaLink: fromLaunch.links?.wikipedia ?? "")
         return model;
     }

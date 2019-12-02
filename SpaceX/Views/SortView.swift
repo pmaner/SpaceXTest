@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct SortView: View {
-    @State private var sortIndex = 0
+    @ObservedObject var launchRepository: LaunchRepositoryModel
     @State private var sortType = ["Launch Date","Mission Name"]
     
     var body: some View {
         HStack {
             Text("Sort")
-            Picker("Sort", selection: $sortIndex) {
+            Picker("Sort", selection: $launchRepository.sortIndex) {
                 ForEach(0 ..< sortType.count) { index in
                     Text(self.sortType[index]).tag(index)
                 }
@@ -25,8 +25,10 @@ struct SortView: View {
     }
 }
 
-struct SortView_Previews: PreviewProvider {
-    static var previews: some View {
-        SortView()
-    }
-}
+//struct SortView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        @ObservedObject var launchRepository = LaunchRepository()
+//
+//        return SortView(launchRepository: launchRepository)
+//    }
+//}
