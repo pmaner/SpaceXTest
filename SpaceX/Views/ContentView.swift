@@ -19,12 +19,10 @@ struct ContentView: View {
     @ObservedObject var launchRepository = LaunchRepositoryModel()
     
     var body: some View {
+        
         NavigationView {
-            MasterView(groupedLaunches: $launchRepository.groupedLaunches)
+            MasterView(launchRepository: launchRepository)
                 .navigationBarTitle(Text("Launches"))
-                .navigationBarItems(
-                    trailing: SortView(launchRepository: launchRepository)
-                )
             DetailView()
         }.navigationViewStyle(DoubleColumnNavigationViewStyle())
     }

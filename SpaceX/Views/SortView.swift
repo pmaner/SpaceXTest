@@ -27,7 +27,7 @@ struct SortView: View {
 
 //struct SortView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        @ObservedObject var launchRepository = LaunchRepository()
+//        @ObservedObject let launchRepository = LaunchRepositoryModel()
 //
 //        return SortView(launchRepository: launchRepository)
 //    }

@@ -19,8 +19,8 @@ class LaunchRepositoryModel : ObservableObject
             regroup();
         }
     }
+    @Published var filterIndex : Int = 0
 
-    
     init() {
         update()
     }
